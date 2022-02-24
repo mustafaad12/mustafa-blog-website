@@ -1,0 +1,28 @@
+<%- include("header") %>
+
+
+
+    <div class="component">
+      <form class="" action="/compose" method="post">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">create a new blog post</label>
+          <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">publish</button>
+      </form>
+
+      <% posts.map((post)=>{ %>
+          <div class="post">
+            <h3><%= post.username %> <span><%= post.date %></span></h3>
+            <p><%= post.content %></p>
+            <a href="/blog/<%= post.id %>"><span><%= post.comments.length %></span><i class="fa-solid fa-comment"></i></a>
+            <form  action="/delete-post" method="post">
+              <input type="hidden" name="postId" value="<%= post.id %>">
+              <button class="btn btn-outline-danger" type="submit" name="button">delete post</button>
+            </form>
+          </div>
+      <%  });%>
+
+    </div>
+
+    <%- include("footer") %>

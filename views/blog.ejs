@@ -1,0 +1,13 @@
+<%- include("header") %>
+
+    <div class="component">
+      <% posts.map((post)=>{ %>
+          <div class="post">
+            <h3><%= post.username %> <span><%= post.date %></span></h3>
+            <p><%= post.content %></p>
+            <a href="/blog/<%= post.id %>"><span><%= post.comments.length %></span><i class="fa-solid fa-comment"></i></a>
+          </div>
+      <%  });%>
+    </div>
+
+<%- include("footer") %>

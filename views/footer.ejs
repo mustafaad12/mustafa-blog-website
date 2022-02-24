@@ -1,0 +1,47 @@
+<div class="footer bg-light">
+  <h2>copyright @mustafa-aldaffaie </h2>
+  <h3><i class="fa-brands fa-telegram"></i> @mustafaAD12</h3>
+</div>
+
+<script src="https://kit.fontawesome.com/911612f574.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript">
+let isDark = true;
+document.querySelector(".dark").addEventListener("click", function(){
+  if(isDark){
+    isDark = false;
+    document.querySelector(".component").style.backgroundColor="black";
+    document.querySelector(".component").style.color="white";
+    document.querySelector(".dark").innerHTML = "light";
+    document.querySelector(".home-header").style.backgroundImage = "url(night.jpg)"
+
+  }else if(!isDark){
+    isDark = true;
+    document.querySelector(".component").style.backgroundColor="white";
+    document.querySelector(".component").style.color="black";
+    document.querySelector(".dark").innerHTML = "dark";
+    document.querySelector(".home-header").style.backgroundImage = "url(header.jpg)"
+  }
+});
+
+function changePostColor(color){
+  var post = document.querySelectorAll(".post").length;
+  for(var i = 0; i<= post; i++){
+     document.querySelectorAll(".post")[i].style.color= color;
+  }
+}
+
+
+
+  var post = document.querySelectorAll(".post").length;
+  for(var i = 0; i<= post; i++){
+     document.querySelectorAll(".post")[i].addEventListener("mouseover", next);
+  }
+
+  function next(){
+    var click = new Audio("click.wav");
+    click.play();
+  }
+</script>
+</body>
+</html>

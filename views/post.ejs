@@ -1,0 +1,37 @@
+<%- include("header") %>
+
+
+<div class="component">
+      <div class="post">
+        <h3><%= post.username %> <span><%= post.date %></span></h3>
+        <p><%= post.content %></p>
+      </div>
+
+      <div class="comment-area">
+        <form class="" action="/comment" method="post">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">create a new comment</label>
+            <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <input type="hidden" name="postId" value="<%= post.id %>">
+          <button class="btn btn-primary comment-btn" type="submit" name="button">publish</button>
+        </form>
+      </div>
+
+    <%  post.comments.map((comment)=>{ %>
+      <div class="comment">
+        <h3><%= comment.username %> <span><%= comment.date %></span></h3>
+        <p><%= comment.content %></p>
+        <form  action="/delete-comment" method="post">
+          <input type="hidden" name="postId" value="<%= post.id %>">
+          <input type="hidden" name="postUserName" value="<%= post.username %>">
+          <input type="hidden" name="commentUserName" value="<%= comment.username %>">
+          <input type="hidden" name="commentId" value="<%= comment.id %>">
+          <button class="btn btn-dark" type="submit" name="button">delete</button>
+        </form>
+      </div>
+    <%  }); %>
+
+</div>
+
+<%- include("footer") %>

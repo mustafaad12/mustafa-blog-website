@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat-black';
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/*navbar*/
+nav{
+  padding: 0 5%;
+}
+.brand{
+  display: grid;
+}
+.brand a{
+  font-size: 30px;
+}
+.brand p{
+  font-size: 20px;
+}
+.navbar-nav{
+  margin-left: auto;
+}
+.nav-link{
+  font-size: 20px;
+  margin: 0 10px;
+  position: relative;
+}
+.nav-link::after{
+  content:"";
+  width: 0;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.nav-link:hover::after{
+  width: 100%;
+}
+
+/*home*/
+
+/*header*/
+.home-header{
+  height: 100vh;
+  background-image: url("pictures/night.jpg");
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-header-text{
+  text-align: center;
+  color: #fff;
+}
+.home-header h1{
+  font-size: 30px;
+}
+
+/*features*/
+
+.features{
+  padding: 7% 14%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.features div{
+  text-align: center;
+  margin: 10px 30px;
+  padding: 20px;
+  flex-basis: 25%;
+  box-shadow: 0 0 20px black;
+  transition: 0.5s;
+}
+.features div:hover{
+  box-shadow: 0 0 40px black;
+}
+.features i{
+  font-size: 50px;
+  color: #65C18C;
+}
+.features h3{
+  font-size: 35px;
+  margin: 10px 0;
+}
+.features p{
+  font-size: 20px;
+}
+
+/*create account section*/
+
+.create-account{
+  padding: 5% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.create-account .left{
+  flex-basis: 40%;
+}
+.text-box h3{
+  background-color: #65C18C;
+  display: inline-block;
+  border-radius: 20px 0;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 25px;
+}
+.text-box h4{
+  font-size: 20px;
+  margin: 30px 0 50px;
+  padding: 10px;
+  border-radius: 20px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  box-shadow: 7px 7px 20px black;
+  width: 80%;
+}
+.text-box a{
+  padding: 12px 20px;
+  background-color: #65C18C;
+  border-radius: 20px;
+  color: #fff;
+  position: relative;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: 20px;
+}
+.text-box a:hover{
+  padding: 12px 30px;
+}
+.text-box a::after{
+  content:"";
+  width: 0;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.text-box a:hover::after{
+  width: 100%;
+}
+.create-account .right{
+  flex-basis: 50%;
+}
+
+.create-account img{
+  width: 100%;
+  border-radius: 30px 0;
+}
+
+/*audience*/
+
+.audience{
+  padding: 7% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+}
+.audience-title{
+  position: absolute;
+  top: 5px;
+}
+.audience div{
+  flex-basis: 30%;
+  text-align: center;
+}
+.audience img{
+  width: 100%;
+}
+.audience h3{
+  margin-top: 10px;
+}
+
+/*footer*/
+
+.footer{
+  padding: 5% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*other pages---------------------------------*/
+
+.component{
+  padding: 7% 10%;
+  min-height: 100vh;
+}
+
+/*login and register pages*/
+
+  .component input{
+    margin: 10px 0;
+  }
+
+  /*blog page*/
+
+.post{
+  width: 80%;
+  background-color: #141E27;
+  color: white;
+  padding: 30px;
+  border-radius: 30px 0;
+  margin: 20px 0;
+}
+.post span{
+  font-size: 20px;
+  margin-left: 20px;
+}
+.post p{
+  font-size: 18px;
+}
+
+.post i, .post a{
+  color: #F1D00A;
+  font-size: 25px;
+  margin: 15px 5px;
+}
+
+/*post page*/
+
+.comment-area{
+  width: 80%;
+}
+.comment-area textarea{
+  height: 70px;
+}
+.comment{
+  border: 1px solid black;
+  border-radius: 20px 0;
+  width: 80%;
+  padding: 10px;
+  margin: 20px 0;
+}
+.comment h3{
+  font-size: 25px;
+}
+.comment span{
+  font-size: 15px;
+  margin-left: 10px;
+}
+.comment p{
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width:1200px){
+  /*home*/
+
+  /*navbar*/
+
+  .brand a{
+    font-size: 40px;
+  }
+  .brand p{
+    font-size: 30px;
+  }
+  .nav-link{
+    font-size: 30px;
+  }
+
+  /*header*/
+  .home-header{
+    height: 70vh;
+  }
+  .home-header h1{
+    font-size: 40px;
+  }
+
+  /*features*/
+
+  .features{
+    padding: 5% 10%;
+    justify-content: space-between;
+  }
+  .features div{
+    margin: 20px 20px;
+    padding: 15px;
+    flex-basis: 40%;
+  }
+  .features i{
+    font-size: 60px;
+    color: #65C18C;
+  }
+  .features h3{
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  .features p{
+    font-size: 30px;
+  }
+
+  /*create account section*/
+
+  .create-account .left{
+    flex-basis: 50%;
+  }
+  .text-box h3{
+    border-radius: 15px 0;
+    font-size: 18px;
+  }
+  .text-box h4{
+    font-size: 12px;
+    margin: 20px 0 40px;
+  }
+  .text-box a{
+    padding: 10px 18px;
+    border-radius: 15px;
+    font-size: 15px;
+  }
+  .create-account .right{
+    flex-basis: 45%;
+  }
+
+  .create-account img{
+    width: 100%;
+    border-radius: 30px 0;
+  }
+
+  /*footer*/
+
+  .footer{
+    padding: 5% 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer h2, .footer h3{
+    font-size: 40px;
+    margin: 0 20px;
+
+  }
+
+  .navbar-toggler{
+    font-size: 30px;
+  }
+
+  /*login and register pages*/
+
+    .component input{
+      margin: 20px 0;
+      font-size: 30px;
+    }
+    .component button{
+      font-size: 30px;
+      margin: 0 20px;
+    }
+
+  /*blog page*/
+
+.post{
+  width: 90%;
+}
+.post h3{
+  font-size: 30px;
+}
+.post span{
+  font-size: 25px;
+  margin-left: 20px;
+}
+.post p{
+  font-size: 25px;
+}
+.post i, .post a{
+  font-size: 30px;
+}
+
+/*post page*/
+
+.comment-area label{
+  font-size: 40px;
+}
+
+.comment-area{
+  width: 90%;
+}
+.comment{
+  width: 90%;
+}
+.comment h3{
+  font-size: 40px;
+}
+.comment span{
+  font-size: 25px;
+}
+.comment p{
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+}
+
+@media only screen and (max-width:1000px){
+  /*home*/
+
+  /*navbar*/
+
+  .brand a{
+    font-size: 50px;
+  }
+  .brand p{
+    font-size: 40px;
+  }
+  .nav-link{
+    font-size: 40px;
+  }
+
+  /*header*/
+  .home-header{
+    height: 40vh;
+  }
+  .home-header h1{
+    font-size: 60px;
+  }
+  .home-header h3{
+    font-size: 50px;
+  }
+
+  /*features*/
+
+  .features div{
+    flex-basis: 100%;
+    max-width: 60%;
+    margin: 30px auto;
+  }
+  .features i{
+    font-size: 70px;
+    color: #65C18C;
+  }
+  .features h3{
+    font-size: 50px;
+    margin: 10px 0;
+  }
+  .features p{
+    font-size: 40px;
+  }
+
+  /*create account section*/
+
+  .create-account .left{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .text-box h3{
+    border-radius: 20px 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 50px;
+  }
+  .text-box h4{
+    font-size: 40px;
+    margin: 30px auto 50px;
+    padding: 10px;
+    border-radius: 20px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    box-shadow: 7px 7px 20px black;
+    width: 80%;
+  }
+  .text-box a{
+    padding: 12px 20px;
+    background-color: #65C18C;
+    border-radius: 20px;
+    color: #fff;
+    position: relative;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .create-account .right{
+    flex-basis: 100%;
+  }
+
+  .create-account img{
+    width: 100%;
+    border-radius: 30px 0;
+  }
+
+  /*audience*/
+
+  .audience{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  .audience-title{
+    position: absolute;
+    top: 5px;
+    font-size: 40px;
+  }
+  .audience div{
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .audience img{
+    width: 80%;
+  }
+  .audience h3{
+    margin-top: 10px;
+  }
+
+  /*footer*/
+
+  .footer{
+    padding: 5% 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer h2{
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  .footer h3{
+    font-size: 30px;
+  }
+
+  .navbar-toggler{
+    font-size: 40px;
+  }
+
+  /*login and register pages*/
+
+    .component input{
+      font-size: 40px;
+    }
+    .component button{
+      font-size: 50px;
+      margin: 20px 0;
+    }
+    .register{
+      font-size: 50px;
+      margin: 20px 0;
+    }
+
+  /*blog page*/
+
+.post h3{
+  font-size: 40px;
+}
+.post span{
+  font-size: 35px;
+}
+.post p{
+  font-size: 35px;
+}
+.post i, .post a{
+  font-size: 40px;
+}
+/*post page*/
+
+label{
+  font-size: 40px;
+}
+
+.comment h3{
+  font-size: 50px;
+}
+.comment span{
+  font-size: 35px;
+}
+.comment p{
+  font-size: 35px;
+}
+
+}

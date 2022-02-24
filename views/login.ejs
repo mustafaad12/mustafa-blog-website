@@ -1,0 +1,21 @@
+<%- include("header") %>
+
+
+    <div class="component">
+      <div class="row g-3">
+        <form class="" action="/login" method="post">
+          <div class="col">
+            <input name="username" type="text" class="form-control" placeholder="username" aria-label="First name">
+          </div>
+          <div class="col">
+            <input name="password" type="password" class="form-control" placeholder="password" aria-label="Last name">
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">login</button>
+        </form>
+
+        <a class="btn btn-primary register"  href="/register">or register</a>
+
+    </div>
+
+  <%- include("footer") %>
